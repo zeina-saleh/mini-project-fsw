@@ -13,17 +13,15 @@
         <div class="row">
             <h1 class="offset-2">Register</h1>
             <div class="card py-4 px-4 col-md-7 offset-2">
-                <form action="" class="validated-form">
+                <form action="/index.html" method="POST" class="validated-form">
                     <div class="row">
                         <div class="col">
-                            <label class="form-label" for="f_name">first name</label>
-                            <input type="text" class="form-control" placeholder="First name" aria-label="First name"
-                                id="f_name" name="first_name">
+                            <label class="form-label" for="first_name">first name</label>
+                            <input type="text" class="form-control" placeholder="First name" aria-label="First name" id="first_name" name="first_name">
                         </div>
                         <div class="col">
-                            <label class="form-label" for="l_name">last name</label>
-                            <input type="text" class="form-control" placeholder="Last name" aria-label="Last name"
-                                id="l_name" name="last_name">
+                            <label class="form-label" for="last_name">last name</label>
+                            <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" id="last_name" name="last_name">
                         </div>
                     </div>
                     <div class="row mt-3">
@@ -46,14 +44,13 @@
                             </div>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-success offset-10">Register</button>
-                    <br>
+                    <button type="button" id="reg_btn" class="btn btn-success offset-10">Register</button>
                     <a href="index.html">Already have an account?</a>
                 </form>
             </div>
         </div>
     </div>
-    <script src="/scripts/script.js"></script>
+    <script src="/frontend_project/scripts/script.js"></script>
     <script>pages.loadFor("register")</script>
 </body>
 
