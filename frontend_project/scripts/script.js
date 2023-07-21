@@ -28,12 +28,38 @@ pages.page_register = () => {
             .then(response => console.log(response.json()))
             .catch(error => console.log(error))
 
+            window.location.replace('/register.html')
+
     })
 
 }
 
 pages.page_index = () => {
-    console.log("hello world login")
+    let login_btn = document.getElementById("log_btn");
+    login_btn.addEventListener('click', function (e) {
+        e.preventDefault()
+
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+
+
+        let formdata = new FormData();
+        formdata.append("email", email);
+        formdata.append("password", password);
+
+        let requestOptions = {
+            method: 'POST',
+            body: formdata,
+            redirect: 'follow'
+        };
+
+        fetch("http://localhost/mini-project/backend_project/login.php", requestOptions)
+            .then(response => console.log(response.json()))
+            .catch(error => console.log(error))
+        
+            window.location.replace('/dashboard.html')
+
+    })
 }
 
 
